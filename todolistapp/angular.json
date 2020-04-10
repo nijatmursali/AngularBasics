@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-crash-todolist": {
+    "todolistapp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-crash-todolist",
+            "outputPath": "dist/todolistapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-crash-todolist:build"
+            "browserTarget": "todolistapp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-crash-todolist:build:production"
+              "browserTarget": "todolistapp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-crash-todolist:build"
+            "browserTarget": "todolistapp:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-crash-todolist:serve"
+            "devServerTarget": "todolistapp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-crash-todolist:serve:production"
+              "devServerTarget": "todolistapp:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "angular-crash-todolist"
+  "defaultProject": "todolistapp"
 }
